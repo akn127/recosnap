@@ -1,0 +1,65 @@
+.registration-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.form-wrap{
+  width: 50%;
+  margin: 50px 0 0 0;
+  border: 1px solid #D8D8D8;
+  border-radius: 10px;
+}
+
+.form-header-text,.new-user,.guest-login{
+  text-align: center;
+}
+
+form input{
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+}
+.field{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.actions{
+  width: 50%;
+  margin: 50px auto 20px;
+}
+.column-row{
+  font-size: 12px;
+  width: 80%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.actions input[type="submit"]{
+  background-color: lightseagreen;
+  color: white;
+}
+
+.new-user{
+  width: 50%;
+  margin: 0 auto 30px;
+  padding: 10px;
+  border: 2px solid lightseagreen;
+  border-radius: 5px;
+}
+.new-user a {
+  text-decoration: none;
+  color: lightseagreen;
+}
+.guest-login a {
+  text-decoration: none;
+  color: grey;
+}
+.guest-login{
+  margin: 50px 0 20px 0;
+  font-size: 14px;
+}

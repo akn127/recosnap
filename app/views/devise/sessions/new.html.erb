@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<div class="registration-main">
+  <div class="form-wrap">
+    <h2 class="form-header-text">ログイン</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"mail@recosnap.com" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", placeholder:"半角英数字6文字以上" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "ログイン" %>
+      </div>
+    <% end %>
+
+      <div class="new-user">
+        <%= link_to '新規登録はこちら', new_user_registration_path, method: :get %>
+      </div>
+
+    <%#= render "devise/shared/links" %>
+      <div class="guest-login">
+        <%= link_to 'ゲストログイン（閲覧用）', user_session_path, method: :post %>
+      </div>
+  </div>
+</div>
