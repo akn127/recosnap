@@ -1,0 +1,15 @@
+body{
+  font-family: arial unicode ms;
+}
+
+footer {
+  margin: 30px auto;
+  padding: 10px;
+  color: #faf8f8;
+
+}
+
+footer p {
+  text-align: center;
+  background-color: #9bf5da;
+}
