@@ -1,12 +1,15 @@
 body{
+  height: 100%;
   font-family: arial unicode ms;
+  position: relative;
 }
 
 footer {
+  width: 100%;
   margin: 30px auto;
   padding: 10px;
   color: #faf8f8;
-
+  position: absolute;
 }
 
 footer p {
