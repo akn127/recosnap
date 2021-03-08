@@ -2,6 +2,8 @@ body{
   height: 100%;
   font-family: arial unicode ms;
   position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
 }
 
 footer {
@@ -10,6 +12,7 @@ footer {
   padding: 10px;
   color: #faf8f8;
   position: absolute;
+  bottom: 0;
 }
 
 footer p {

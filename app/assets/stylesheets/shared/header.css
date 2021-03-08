@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
 }
-.icon a {
-  width: 200px;
-  text-decoration: none;
+.recosnap-icon {
+  width: 15vw;
+  margin-left: 10px;
 }
 
 .nav{
@@ -58,6 +58,7 @@ ul{
 }
 li{
   list-style: none;
+  padding: 0 0 10px 0;
 }
 
 .nav span:hover > ul {
