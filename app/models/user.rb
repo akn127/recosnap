@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :records
 
 
-  validates :name presence: true
+  validates :name, presence: true
 
   def self.guest
     find_or_create_by!(name: 'guestname') do |user|
