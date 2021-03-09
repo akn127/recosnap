@@ -9,7 +9,7 @@ class CreateRecords < ActiveRecord::Migration[6.0]
       t.string :with
       t.text :text
       t.string :url
-      t.integer :status,         null: false
+      t.integer :status,         null: false, default: 0
       t.timestamps
     end
   end

@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+}
+ul {
+  list-style:none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+.records-contents{
+  background-color: #FFF;
+}
+.record-lists{
+  width: 90vw;
+  margin: 10px auto;
+}
+.record-lists>.list {
+  width: 80vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+.image {
+  width: 33vh;
+  height: 33vh;
+}
