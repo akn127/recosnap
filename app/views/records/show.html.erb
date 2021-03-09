@@ -1,0 +1,38 @@
+<%= render 'shared/header' %>
+
+<div class="record-show">
+  <div class="record-img-content">
+    <%= image_tag @record.image, class:"record-box-img" if @record.image.attached? %>
+  </div>
+    <div class="title-box">
+      <h2 class="title">
+      <%= @record.title %>
+      </h2>
+    <div class="category-box">
+      カテゴリー ：<%= @record.category.name %>
+    </div>
+    </div>
+    <div class="date-box">
+      日付：<%= @record.date %>
+    </div>
+    <div class="place-box">
+      場所 ：<%= @record.place %>
+    </div>
+    <div class="with-box">
+      一緒に行った人 :<%= @record.with %>
+    </div>
+    <div class="text-box">
+      記録 ：<%= @record.text %>
+    </div>
+     <div class="url-box">
+      参考URL ：<%= @record.url %>
+    </div>
+
+    <%= link_to "編集", edit_record_path(@record.id), method: :get, class: "record-edit-btn" %>
+    <%= link_to "削除", record_path(@record.id), method: :delete, class: "record-destroy" %>
+    <%= link_to "一覧へ戻る", "/", class: "root" %>
+</div>
+
+
+
+
