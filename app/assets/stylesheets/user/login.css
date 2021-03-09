@@ -13,7 +13,7 @@
   border-radius: 10px;
 }
 
-.form-header-text,.new-user,.guest-login{
+.form-header-text,.new-user,.guest-login,.login-flash-message{
   text-align: center;
 }
 
