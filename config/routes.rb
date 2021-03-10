@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
-  end
+  devise_for :users
   root to: "records#index"
+  resources :records, only: [:index, :new, :create, :show, :destroy, :edit, :update]
 end

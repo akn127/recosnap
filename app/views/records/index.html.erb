@@ -1,6 +1,29 @@
-<%= render "shared/header" %>
+<%= render 'shared/header' %>
 
-<div class="main">
+<div class='main'>
   <h1>思い出を記録しよう</h1>
+
+  <%# 記録一覧 %>
+  <div class='records-contents'>
+    <ul class='records-lists'>
+      <% @records.each do |record| %>
+      <li class='list'>
+        <%= link_to record_path(record.id), method: :get do %>
+        <div class='record-info'>
+          <h3 class='record-title'>
+            <%= record.title %>
+          </h3>
+          <div class='record-memo'>
+            <span><%= record.date %><br><%= record.place %></span>
+          </div>
+          <div class='record-image-content'>
+            <%= image_tag record.image, class:'image' if record.image.attached? %>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 
 </div>

@@ -1,18 +1,18 @@
 <header class="header">
   <div class="header-bar">
     <div class="icon">
-      <h1 class="title"><a href="/">RecoSnap</a></h1>
+      <%= link_to image_tag("Recosnap_logo.png", class:"recosnap-icon"), "/" %>
     </div>
     <% if user_signed_in? %>
       <div class="nav">
-      <span><%= current_user.name %>
-        <ul class="lists-button">
-          <li><%= link_to 'お気に入り', "#", class: "menu" %></li>
-          <li><%= link_to 'ユーザー情報変更', "#", class: "menu" %></li>
-          <li><%= link_to 'ログアウト', destroy_user_session_path,method: :delete, class: "menu" %></li>
-        </ul>
+        <span><%= current_user.name %>
+          <ul class="lists-button">
+            <li><%= link_to 'お気に入り', "#", class: "menu" %></li>
+            <li><%= link_to 'ユーザー情報変更', "#", class: "menu" %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path,method: :delete, class: "menu" %></li>
+          </ul>
         </span>
-        <%= link_to "記録する", "#", class:"post" %>
+        <%= link_to "記録する", new_record_path, class:"post" %>
         <%= link_to "みんなの記録", "#", class:"post" %>
       </div>
     <% end %>

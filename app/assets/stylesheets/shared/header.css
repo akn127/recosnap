@@ -4,61 +4,73 @@
 
 .header-bar{
   width: 100vw;
-  height: 100px;
+  height: 60px;
   background-color: #9bf5da;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
-.icon a {
-  width: 200px;
-  text-decoration: none;
+.recosnap-icon {
+  width: 15vw;
+  margin-left: 10px;
 }
 
 .nav{
-  font-size: 18px;
+  padding-left: 30%;
+  width: 100vw;
+  font-size: 20px;
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  position: relative;
 }
-
-span{
-  top: 5px;
-  display: block;
+.nav span{
+  position: relative;
   float: left;
-  margin-left: 30px;
-  width: 200px;
+  margin: 20px 0 0 0;
+  padding-right: 30px;
+  width: 150px;
   height: 50px;
   font-size: 1em;
-  cursor: pointer;
-  position: relative;
-  text-align: center;
+  text-align: right;
+}
+
+.nav span ul{
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 ul{
-  position: absolute;
-  right: 0;
-  border-left: 1px solid #faf6f6;
-  border-right: 1px solid #faf6f6;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-  display: block;
-  padding: 10px 20px;
-  text-align: left;
-  border-bottom: 1px solid #faf6f6;
-  background-color: #faf6f6;
+  margin: 20px 0 0 0;
+  padding: 0;
 }
 
-.lists-button{
-  list-style: none; 
-}
-
-.menu{
+.nav span ul li a{
+  font-size: 15px;
   text-decoration: none;
+  text-align: left;
+  padding: 0px;
+  color: black;
+  border-bottom: 1px solid #d8d8d8;
+}
+li{
+  list-style: none;
+  padding: 0 0 10px 0;
+}
+
+.nav span:hover > ul {
+  display: block;
 }
 
 .post{
-  margin-right: 40px;
+  font-size: 15px;
   text-decoration: none;
+  margin: 0 10px;
+  color: black;
 }
+
+
 
