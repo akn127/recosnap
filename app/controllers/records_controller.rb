@@ -1,6 +1,8 @@
 class RecordsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+
   def index
-    @records = Record.all.order("date DESC")
+    @records = current_user.records.order("date DESC")
   end
 
   def new
@@ -17,21 +19,17 @@ class RecordsController < ApplicationController
   end
 
   def show
-    @record = Record.find(params[:id])
   end
 
   def edit
-    @record = Record.find(params[:id])
   end
 
   def update
-    @record = Record.find(params[:id])
     @record.update(record_params)
     redirect_to root_path
   end
 
   def destroy
-    @record = Record.find(params[:id])
     @record.destroy
     redirect_to root_path
   end
@@ -40,6 +38,10 @@ class RecordsController < ApplicationController
 
   def record_params
     params.require(:record).permit(:image, :title, :category_id, :date, :place, :with, :text, :url, :status).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @record = current_user.records.find(params[:id])
   end
 
 end

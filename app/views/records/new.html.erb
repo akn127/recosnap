@@ -11,8 +11,7 @@
     <%# 画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
-        出品画像
-        <span class="indispensable">必須</span>
+        画像
       </div>
       <div class="click-upload">
         <p>
@@ -38,7 +37,20 @@
       日付
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :date, class:"date", id:"record-date", placeholder:"20190401", maxlength:"40" %>
+    <div class='input-date-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :date,
+                    class:'select-date',
+                    id:"record-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: Time.now.year,
+                    end_year: (Time.now.year - 10),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+
     <div class="record-place">
       場所/施設名
       <span class="indispensable">必須</span>

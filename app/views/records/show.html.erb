@@ -22,10 +22,10 @@
       一緒に行った人 :<%= @record.with %>
     </div>
     <div class="text-box">
-      記録 ：<%= @record.text %>
+      記録 ：<%= simple_format(h(@record.text)) %>
     </div>
      <div class="url-box">
-      参考URL ：<%= @record.url %>
+      参考URL ：<%= text_url_to_link(@record.url).html_safe %>
     </div>
 
     <%= link_to "編集", edit_record_path(@record.id), method: :get, class: "record-edit-btn" %>
