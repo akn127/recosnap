@@ -9,4 +9,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  PASSWORD_REGEX = /(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}/i
+  validates :password, format: { with: PASSWORD_REGEX, message: 'は半角英数字で入力してください' }
+
 end

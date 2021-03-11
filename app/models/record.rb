@@ -9,6 +9,7 @@ class Record < ApplicationRecord
     validates :category_id
     validates :date
     validates :place
+    validates :text
     validates :status
   end
 
