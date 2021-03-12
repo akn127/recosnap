@@ -21,7 +21,7 @@
       </div>
       <div id="image-list"></div>
     </div>
-    <%= image_tag @record.image, id: 'image' if %>
+    <%= image_tag @record.image, id: 'image' if @record.image.present? %>
     <%# /画像 %>
 
     <%# 記録フォーマット %>
