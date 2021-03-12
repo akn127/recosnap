@@ -11,11 +11,8 @@
   <% end %>
   <%# //検索フォーム %>
 
-  <%# 記録一覧 %>
-  <div class='records-contents'>
-      <% @records.each do |record| %>
-        <%= render partial: "record", locals: {record: record} %>
-      <% end %>
+  <div class="contents row">
+    <% @results.each do |record| %>
+      <%= render partial: "record", locals: { record: record } %>
+    <% end %>
   </div>
-
-</div>

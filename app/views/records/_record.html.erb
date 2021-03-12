@@ -1,0 +1,22 @@
+    <ul class='records-lists'>
+      <li class='list'>
+        <%= link_to record_path(record.id), method: :get do %>
+        <div class='record-info'>
+          <h3 class='record-title'>
+            <%= record.title %>
+          </h3>
+          <div class='record-memo'>
+            <span><%= record.date %><br><%= record.place %></span>
+          </div>
+          <div class='record-image-content'>
+          <% if record.images.count > 0%>
+            <%= image_tag record.images.first, class:'image' %>
+          <% end %>
+          </div>
+          <div class='record-status'>
+            <%= record.status %>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    </ul>

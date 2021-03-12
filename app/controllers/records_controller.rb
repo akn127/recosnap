@@ -1,5 +1,6 @@
 class RecordsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_q, only: [:index, :search]
 
   def index
     @records = current_user.records.order("date DESC")
@@ -34,6 +35,10 @@ class RecordsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @results = @q.result
+  end
+
   private
 
   def record_params
@@ -42,6 +47,10 @@ class RecordsController < ApplicationController
 
   def set_item
     @record = current_user.records.find(params[:id])
+  end
+
+  def set_q
+    @q = Record.ransack(params[:q])
   end
 
 end
