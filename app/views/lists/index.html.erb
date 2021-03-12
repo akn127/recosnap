@@ -1,7 +1,7 @@
 <%= render 'shared/header' %>
 
 <div class='main'>
-  <h1>思い出を記録しよう</h1>
+  <h1>みんなの記録</h1>
 
   <%# 記録一覧 %>
   <div class='records-contents'>
@@ -14,13 +14,10 @@
             <%= record.title %>
           </h3>
           <div class='record-memo'>
-            <span><%= record.date %><br><%= record.place %></span>
+            <span><%= record.date %><br><%= record.place %><br><%= record.user.name %></span>
           </div>
           <div class='record-image-content'>
             <%= image_tag record.image, class:'image' if record.image.attached? %>
-          </div>
-          <div class='record-status'>
-            <%= record.status %>
           </div>
         </div>
         <% end %>
