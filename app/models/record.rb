@@ -2,7 +2,7 @@ class Record < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
 
   with_options presence: true do
     validates :title

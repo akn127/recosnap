@@ -2,7 +2,9 @@
 
 <div class="record-show">
   <div class="record-img-content">
-    <%= image_tag @record.image, class:"record-box-img" if @record.image.attached? %>
+    <% @record.images.each do |image|%>
+    <%= image_tag image, class:"record-box-img" %>
+    <% end %>
   </div>
     <div class="title-box">
       <h2 class="title">

@@ -17,11 +17,13 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"record-image" %>
+        <%= f.file_field :images, name: 'record[images][]', id:"record-image" %>
       </div>
       <div id="image-list"></div>
     </div>
-    <%= image_tag @record.image, id: 'image' if @record.image.present? %>
+    <% @record.images.each do |image| %>
+      <%= image_tag image, class: 'images' %>
+    <% end %>
     <%# /画像 %>
 
     <%# 記録フォーマット %>

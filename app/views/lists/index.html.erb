@@ -17,7 +17,9 @@
             <span><%= record.date %><br><%= record.place %><br><%= record.user.name %></span>
           </div>
           <div class='record-image-content'>
-            <%= image_tag record.image, class:'image' if record.image.attached? %>
+            <% record.images.each do |image| %>
+            <%= image_tag record, class:'images' %>
+            <% end %>
           </div>
         </div>
         <% end %>
