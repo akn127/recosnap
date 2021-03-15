@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_record, only: [:show, :edit, :update, :destroy]
   before_action :set_q, only: [:index, :search]
 
   def index
@@ -46,7 +46,7 @@ class RecordsController < ApplicationController
     params.require(:record).permit(:title, :category_id, :date, :place, :with, :text, :url, :status, images: []).merge(user_id: current_user.id)
   end
 
-  def set_item
+  def set_record
     @record = current_user.records.find(params[:id])
   end
 
