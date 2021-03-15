@@ -1,8 +1,6 @@
-<div class="record-wright-contents">
-  <header class="record-wright-header">
-    <%= link_to image_tag('Recosnap_logo.png' , size: '185x50'), "/" %>
+<%= render 'shared/header' %>
 
-  </header>
+<div class="record-wright-contents">
   <div class="record-wright-main">
     <h2 class="record-wright-title">あの日の記録を入力</h2>
     <%= form_with(model: @record, local: true) do |f| %>
