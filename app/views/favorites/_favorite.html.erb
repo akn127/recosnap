@@ -1,0 +1,7 @@
+<% if !Favorite.exists?(user: current_user, record_id: @record.id) %>
+  <%= link_to "お気に入り登録", record_favorites_path(@record), method: :post %>
+  <%= @record.favorites.length %>
+<% else %>
+  <%= link_to "お気に入り解除", record_favorite_path(@record), method: :delete %>
+  <%= @record.favorites.length %>
+<% end %>

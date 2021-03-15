@@ -1,0 +1,36 @@
+<%= render 'shared/header' %>
+<div class="main-records">
+<h1>お気に入り一覧</h1>
+
+<div class="favorite-list">
+<% if @favorites.present? %>
+  <% @favorites.each do |record| %>
+
+    <ul class='records-lists'>
+      <li class='list'>
+        <%= link_to list_path(record.id), method: :get do %>
+        <div class='record-info'>
+          <div class='record-image-content'>
+          <% if record.images.count > 0%>
+            <%= image_tag record.images.first, class:'image' %>
+          <% end %>
+          </div>
+          <div class='record-string-content'>
+            <h3 class='record-title'>
+              <%= record.title %>
+            </h3>
+            <div class='record-memo'>
+              <span><%= record.date %><br><%= record.place %></span>
+            </div>
+            <div class='record-status'>
+              <%= record.status %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    </ul>
+  <% end %>
+<% end %>
+</div>
+</div>

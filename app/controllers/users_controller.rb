@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  def index
+  def show
     @user = User.find(params[:id])
-    @records = @user.records
+    @records = @user.records.order("created_at DESC")
 
     favorites = Favorite.where(user_id: current_user.id).pluck(:record_id)
-    @favorite_list = Record.find(favorites)
+    @favorites = Record.find(favorites)
   end
 end
