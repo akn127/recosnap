@@ -2,6 +2,7 @@ class Record < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :user
+  has_many :favorites, dependent: :destroy
   has_many_attached :images
 
   with_options presence: true do
