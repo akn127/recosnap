@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    resources :favorites, onry: [:create, :destroy]
   end
   resources :lists, only: [:index]
+  resources :users
 end
