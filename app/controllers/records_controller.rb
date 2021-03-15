@@ -4,6 +4,7 @@ class RecordsController < ApplicationController
 
   def index
     @records = current_user.records.order("date DESC")
+    @results = @q.result.order("date DESC")
   end
 
   def new
@@ -36,7 +37,7 @@ class RecordsController < ApplicationController
   end
 
   def search
-    @results = @q.result
+    @results = @q.result.order("date DESC")
   end
 
   private

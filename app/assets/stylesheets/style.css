@@ -1,14 +1,18 @@
 body{
   height: 100%;
-  font-family: arial unicode ms;
   position: relative;
   padding-bottom: 120px;
   box-sizing: border-box;
+  font-family: BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 footer {
   width: 100%;
-  margin: 30px auto;
   padding: 10px;
   color: #faf8f8;
   position: absolute;

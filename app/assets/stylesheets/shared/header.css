@@ -1,13 +1,15 @@
 * {
   box-sizing: border-box;
 }
-
 .header-bar{
+  top: 0;
+  position: fixed;
   width: 100vw;
-  height: 60px;
-  background-color: #9bf5da;
+  height: 70px;
   display: flex;
   align-items: center;
+  background-color: white;
+  border-bottom: 1px groove grey;
 }
 .recosnap-icon {
   width: 15vw;
@@ -41,9 +43,7 @@
   border-left: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
-}
-
-ul{
+  list-style: none;
   margin: 20px 0 0 0;
   padding: 0;
 }
@@ -54,12 +54,8 @@ ul{
   text-align: left;
   padding: 0px;
   color: black;
-  border-bottom: 1px solid #d8d8d8;
 }
-li{
-  list-style: none;
-  padding: 0 0 10px 0;
-}
+
 
 .nav span:hover > ul {
   display: block;

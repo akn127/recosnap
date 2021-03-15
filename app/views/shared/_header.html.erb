@@ -5,7 +5,7 @@
     </div>
     <% if user_signed_in? %>
       <div class="nav">
-        <span><%= link_to "#{current_user.name}", "/", method: :get, class:"user-name" %>
+        <span><%= link_to "#{current_user.name}さん", "/", method: :get, class:"user-name" %>
           <ul class="lists-button">
             <li><%= link_to 'お気に入り', "#", class: "menu" %></li>
             <li><%= link_to 'ユーザー情報変更', "#", class: "menu" %></li>
