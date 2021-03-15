@@ -1,8 +1,6 @@
-<div class="record-wright-contents">
-  <header class="record-wright-header">
-    <%= link_to image_tag('Recosnap_logo.png' , size: '185x50'), "/" %>
+<%= render 'shared/header' %>
 
-  </header>
+<div class="record-wright-contents">
   <div class="record-wright-main">
     <h2 class="record-wright-title">あの日の記録を入力</h2>
     <%= form_with(model: @record, local: true) do |f| %>
@@ -42,7 +40,7 @@
       <span class="indispensable">必須</span>
     </div>
     <div class='input-date-wrap'>
-      <%= raw sprintf(
+      <%#= raw sprintf(
                   f.date_select(
                     :date,
                     class:'select-date',
@@ -53,7 +51,7 @@
                     end_year: (Time.now.year - 10),
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-        <%#= f.date_field :sample_at %>
+        <%= f.date_field :date %>
         <%#カレンダー型がいいならこっち↑%>
     </div>
 

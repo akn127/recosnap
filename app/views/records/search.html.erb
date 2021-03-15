@@ -1,11 +1,10 @@
 <%= render 'shared/header' %>
 
 <div class='main'>
-<div class='main-records'>
-  <h1>思い出を記録しよう</h1>
+  <div class='main-records'>
 
   <%# 検索フォーム %>
-  <div class="search-form">
+ <div class="search-form">
   <%= search_form_for @q, url: search_records_path do |f| %>
     <div class="freeword-form">
       <%= f.label :title_or_text_cont, 'キーワード検索' %>
@@ -34,11 +33,10 @@
   </div>
   <%# //検索フォーム %>
 
-  <%# 記録一覧 %>
-  <div class='records-contents'>
-      <% @records.each do |record| %>
-        <%= render partial: "record", locals: {record: record} %>
-      <% end %>
+  <div class="records-contents">
+    <% @results.each do |record| %>
+      <%= render partial: "record", locals: { record: record } %>
+    <% end %>
   </div>
-</div>
+  </div>
 </div>

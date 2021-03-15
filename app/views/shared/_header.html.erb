@@ -1,11 +1,11 @@
 <header class="header">
   <div class="header-bar">
     <div class="icon">
-      <%= link_to image_tag("Recosnap_logo.png", class:"recosnap-icon"), "/" %>
+      <%= link_to image_tag("RecoSnap-Logo.png", class:"recosnap-icon"), "/" %>
     </div>
     <% if user_signed_in? %>
       <div class="nav">
-        <span><%= link_to "#{current_user.name}", "/", method: :get, class:"user-name" %>
+        <span><%= link_to "#{current_user.name}さん", "/", method: :get, class:"user-name" %>
           <ul class="lists-button">
             <li><%= link_to 'お気に入り', "#", class: "menu" %></li>
             <li><%= link_to 'ユーザー情報変更', "#", class: "menu" %></li>
