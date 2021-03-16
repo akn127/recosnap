@@ -51,11 +51,11 @@ a {
   flex-wrap: wrap;
 }
 .record-image-content{
+  width: 40%;
+}
+.record-image-content img {
   width: 200px;
 }
-.record-image-content image {
-  width: 100px;
-}
 .record-string-content{
-  width: calc(100% - 230px);
+  width: calc(100% - 50%);
 }

@@ -12,8 +12,9 @@
   border-bottom: 2px solid #B2D0DA;
 }
 .recosnap-icon {
-  width: 20vw;
+  height: 10vh;
   margin-left: 10px;
+  vertical-align: middle;
 }
 
 .nav{

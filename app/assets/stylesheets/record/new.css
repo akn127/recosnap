@@ -1,3 +1,76 @@
 .record-wright-contents{
   margin: 70px auto 0;
 }
+
+.record-wright-main{
+  width: 500px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.info{
+  width: 100px;
+  font-size: 13px;
+  background-color: #EED2BC;
+  text-align: center;
+}
+.image-element img{
+  width: 200px;
+}
+
+.click-upload p{
+  margin: 0;
+}
+#record-title,
+#record_date,
+#record-place,
+#record-with{
+  width: 500px;
+  border-bottom: 2px solid #B2D0DA;
+  border-top: 1px solid #fafafa;
+  border-left: 1px solid #fafafa;
+  border-right:  1px solid #fafafa;
+}
+#record-text{
+  height: 150px;
+  width: 500px;
+  border-bottom: 2px solid #B2D0DA;
+  border-top: 1px solid #fafafa;
+  border-left: 1px solid #fafafa;
+  border-right:  1px solid #fafafa;
+}
+#record-url{
+  height: 2em;
+  width: 500px;
+  border-bottom: 2px solid #B2D0DA;
+  border-top: 1px solid #fafafa;
+  border-left: 1px solid #fafafa;
+  border-right:  1px solid #fafafa;
+}
+.indispensable{
+  font-size: 20px;
+  color: #EED2BC;
+}
+.weight-bold-text,
+.title-box{
+  margin-top: 10px;
+  font-weight: bold;
+}
+.record-btn-contents{
+  display: flex;
+  justify-content: center;
+}
+.record-btn{
+  margin-top: 20px;
+  width: 150px;
+  border-color: #B2D0DA;
+  background-color: #B2D0DA;
+  color: #545454;
+  font-size: 15px;
+  cursor: pointer;
+}
+.back-btn{
+  display: flex;
+  justify-content: center;
+}
+
