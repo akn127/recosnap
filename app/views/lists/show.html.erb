@@ -1,40 +1,62 @@
 <%= render 'shared/header' %>
 
 <div class="record-show">
+
   <div class="record-img-content">
     <% @record.images.each do |image|%>
     <%= image_tag image, class:"record-box-img" %>
     <% end %>
   </div>
-    <div class="title-box">
-      <h2 class="title">
-      <%= @record.title %>
-      </h2>
-    <div class="category-box">
-      カテゴリー ：<%= @record.category.name %>
-    </div>
-    </div>
-    <div class="date-box">
-      日付：<%= @record.date %>
-    </div>
-    <div class="place-box">
-      場所 ：<%= @record.place %>
-    </div>
-    <div class="with-box">
-      一緒に行った人 :<%= @record.with %>
-    </div>
-    <div class="text-box">
-      記録 ：<%= simple_format(h(@record.text)) %>
-    </div>
-     <div class="url-box">
-      参考URL ：<%= text_url_to_link(@record.url).html_safe %>
-    </div>
 
+    <div class="show-box">
+      <div class="title-box">
+        <h2 class="title">
+        <%= @record.title %>
+        </h2>
+    
     <%# お気に入りボタン %>
     <%= render "favorites/favorite", record: @record %>
     <%# お気に入りボタン %>
-    
-    <%= link_to "編集", edit_record_path(@record.id), method: :get, class: "record-edit-btn" %>
-    <%= link_to "削除", record_path(@record.id), method: :delete, data: { confirm: "記録を削除してもよろしいですか？"}, class: "record-destroy" %>
+
+    </div>
+    <div class="show-title-box">
+      <div class="category-text">カテゴリー</div>
+      <div class="category-id"><%= @record.category.name %></div>
+    </div>
+    <div class="show-title-box">
+      <div class="category-text">日付</div>
+      <div class="category-id"><%= @record.date %></div>
+    </div>
+    <div class="show-title-box">
+      <div class="category-text">場所</div>
+      <div class="category-id"><%= @record.place %></div>
+    </div>
+    <div class="show-title-box">
+      <div class="category-text">一緒に行った人</div>
+      <div class="category-id"><%= @record.with %></div>
+    </div>
+    <div class="show-record-box">
+      <div class="record-title">記録</div>
+      <div class="record-text-box"><%= simple_format(h(@record.text)) %></div>
+    </div>
+    <div class="show-title-box">
+      <div class="category-text">参考URL</div>
+      <div class="category-id"><%= text_url_to_link(@record.url).html_safe %></div>
+    </div>
+  </div>
+
+
+  <div class="edit-btn">
+    <div class="edit-btn-box">
+    <%= link_to "編 集", edit_record_path(@record.id), method: :get, class: "record-edit-btn" %>
+    </div>
+  </div>
+  <div class="destroy-btn">
+    <div class="destroy-btn-box">
+    <%= link_to "削 除", record_path(@record.id), method: :delete, data: { confirm: "記録を削除してもよろしいですか？"}, class: "record-destroy" %>
+    </div>
+  </div>
+  <div class="root-btn">
     <%= link_to "一覧へ戻る", "/", class: "root" %>
-</div>
+  </div>
+</div>  
