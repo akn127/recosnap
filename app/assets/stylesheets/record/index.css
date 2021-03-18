@@ -3,10 +3,10 @@ a {
 }
 
 .main {
-  background: #B2D0DA;
+  background-color: white;
 }
 .main-records{
-  background-color: #B2D0DA;
+  background-color: white;
   width: 70%;
   margin: 70px auto 0;
   padding-top: 20px;
@@ -75,3 +75,29 @@ a {
 .submit-btn input:hover{
   opacity: 0.5;
 }
+/*paginate*/
+.pagination{
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.pagination span{
+  text-align: center;
+  width: 50px;
+  color: #602F44;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.pagination span:hover{
+  transition: .3s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.pagination span a:hover{
+  transition: .3s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
