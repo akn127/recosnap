@@ -3,10 +3,10 @@ a {
 }
 
 .main {
-  background: #fafafa;
+  background: #B2D0DA;
 }
 .main-records{
-  background-color: #fafafa;
+  background-color: #B2D0DA;
   width: 70%;
   margin: 70px auto 0;
   padding-top: 20px;
@@ -25,7 +25,7 @@ a {
 .date ul li{
   width: auto;
   float: left;
-  margin: 0 5px 0 0;
+  margin: 0 5px 10px 0;
   padding: 0;
   line-height: 35px;
 }
@@ -35,6 +35,9 @@ a {
   background-color: #FFF;
   padding: 20px;
   border: 1px solid gray;
+}
+.records-contents ul:hover {
+  box-shadow: 1px 1px 12px rgba(0,0,0,.65);
 }
 .record-lists{
   width: 90vw;
@@ -51,11 +54,24 @@ a {
   flex-wrap: wrap;
 }
 .record-image-content{
+  width: 40%;
+}
+.record-image-content img {
   width: 200px;
 }
-.record-image-content image {
-  width: 100px;
-}
 .record-string-content{
-  width: calc(100% - 230px);
+  width: calc(100% - 50%);
+}
+.submit-btn{
+  width: 100px;
+  margin: 0 auto;
+}
+.submit-btn input{
+  background-color: #FBE9D9;
+  border: 1px solid #FBE9D9;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.submit-btn input:hover{
+  opacity: 0.5;
 }

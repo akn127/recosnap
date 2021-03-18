@@ -1,10 +1,9 @@
-<div class="record-wright-contents">
-  <header class="record-wright-header">
-    <%= link_to image_tag('Recosnap_logo.png' , size: '185x50'), "/" %>
+<%= render 'shared/header' %>
 
-  </header>
+<div class="record-wright-contents">
   <div class="record-wright-main">
     <h2 class="record-wright-title">記録を編集</h2>
+    <div class="info">＊は必須項目</div>
     <%= form_with(model: @record, local: true) do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
 
@@ -17,40 +16,44 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"record-image" %>
+        <%= f.file_field :image, name: 'record[images][]', id:"record-image" %>
       </div>
+      <div id="image-list"></div>
     </div>
+    <%# @record.images.each do |image| %>
+      <%#= image_tag image, class: 'images' %>
+    <%# end %>
     <%# /画像 %>
 
     <%# 記録フォーマット %>
     <div class="weight-bold-text">
       タイトル
-      <span class="indispensable">必須</span>
+      <span class="indispensable">*</span>
     </div>
     <%= f.text_area :title, class:"title", id:"record-title", placeholder:"例）お花見", maxlength:"40" %>
     <div class="record-category">
       カテゴリ
-      <span class="indispensable">必須</span>
+      <span class="indispensable">*</span>
     </div>
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"record-category-select"}) %>
     <div class="record-date">
       日付
-      <span class="indispensable">必須</span>
+      <span class="indispensable">*</span>
     </div>
-    <%= f.text_area :date, class:"date", id:"record-date", placeholder:"20190401", maxlength:"40" %>
+    <%= f.date_field :date %>
     <div class="record-place">
       場所/施設名
-      <span class="indispensable">必須</span>
+      <span class="indispensable">*</span>
     </div>
     <%= f.text_area :place, class:"place", id:"record-place", placeholder:"例）上野公園", maxlength:"40" %>
     <div class="record-with">
       誰といった？
-      <span class="indispensable">必須</span>
+      <span class="indispensable">*</span>
     </div>
     <%= f.text_area :with, class:"with", id:"record-with", placeholder:"例）〇〇さん", maxlength:"40" %>
     <div class="record-text">
       おでかけの記録
-      <span class="indispensable">必須</span>
+      <span class="indispensable">*</span>
     </div>
     <%= f.text_area :text, class:"text", id:"record-text", placeholder:"楽しかった思い出を自由に記録しましょう！", maxlength:"1000" %>
     <div class="record-url">
@@ -64,11 +67,12 @@
 
     <div class="record-btn-contents">
       <%= f.submit "保存する" ,class:"record-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     <% end %>
   </div>
   <%# /記録フォーマット %>
 
-
+  <div class="back-button">
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
 </div>

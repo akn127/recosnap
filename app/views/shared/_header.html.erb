@@ -12,8 +12,8 @@
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "menu" %></li>
           </ul>
         </span>
-        <%= link_to "記録する", new_record_path, class:"post" %>
-        <%= link_to "みんなの記録", lists_path, method: :get, class:"post" %>
+        <i class="fas fa-pen"></i><%= link_to "記録する", new_record_path, class:"post" %>
+        <i class="fas fa-user-edit"></i><%= link_to "みんなの記録", lists_path, method: :get, class:"post" %>
       </div>
     <% end %>
   </div>

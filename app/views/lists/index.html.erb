@@ -1,31 +1,15 @@
 <%= render 'shared/header' %>
 
 <div class='main'>
+<div class='main-records'>
   <h1>みんなの記録</h1>
 
   <%# 記録一覧 %>
   <div class='records-contents'>
-    <ul class='records-lists'>
-      <% @records.each do |record| %>
-      <li class='list'>
-        <%= link_to list_path(record.id), method: :get do %>
-        <div class='record-info'>
-          <h3 class='record-title'>
-            <%= record.title %>
-          </h3>
-          <div class='record-memo'>
-            <span><%= record.date %><br><%= record.place %><br><%= record.user.name %></span>
-          </div>
-          <div class='record-image-content'>
-            <% record.images.each do |image| %>
-            <%= image_tag record, class:'images' %>
-            <% end %>
-          </div>
-        </div>
-        <% end %>
-      </li>
-      <% end %>
-    </ul>
+    <% @records.each do |record| %>
+      <%= render partial: "recordlist", locals: {record: record}%>
+    <% end %>
   </div>
 
+</div>
 </div>
