@@ -3,7 +3,7 @@
         <%= link_to record_path(record.id), method: :get do %>
         <div class='record-info'>
           <div class='record-image-content'>
-          <% if record.images.count > 0%>
+          <% if record.images.count > 0 %>
             <%= image_tag record.images.first, class:'image' %>
           <% else %>
             <%= image_tag "noimage.png" %>

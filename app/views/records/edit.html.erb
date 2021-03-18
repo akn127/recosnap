@@ -20,9 +20,9 @@
       </div>
       <div id="image-list"></div>
     </div>
-    <% @record.images.each do |image| %>
-      <%= image_tag image, class: 'images' %>
-    <% end %>
+    <%# @record.images.each do |image| %>
+      <%#= image_tag image, class: 'images' %>
+    <%# end %>
     <%# /画像 %>
 
     <%# 記録フォーマット %>
@@ -40,7 +40,7 @@
       日付
       <span class="indispensable">*</span>
     </div>
-    <%= f.text_area :date, class:"date", id:"record-date", placeholder:"20190401", maxlength:"40" %>
+    <%= f.date_field :date %>
     <div class="record-place">
       場所/施設名
       <span class="indispensable">*</span>

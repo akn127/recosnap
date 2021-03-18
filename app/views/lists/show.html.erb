@@ -36,7 +36,7 @@
       <div class="category-id"><%= @record.with %></div>
     </div>
     <div class="show-record-box">
-      <div class="record-title">記録</div>
+      <div class="record-title-text">記録</div>
       <div class="record-text-box"><%= simple_format(h(@record.text)) %></div>
     </div>
     <div class="show-title-box">
@@ -45,7 +45,7 @@
     </div>
   </div>
 
-
+　<% if current_user.id == @record.user_id %>
   <div class="edit-btn">
     <div class="edit-btn-box">
     <%= link_to "編 集", edit_record_path(@record.id), method: :get, class: "record-edit-btn" %>
@@ -56,7 +56,9 @@
     <%= link_to "削 除", record_path(@record.id), method: :delete, data: { confirm: "記録を削除してもよろしいですか？"}, class: "record-destroy" %>
     </div>
   </div>
+  <% end %>
+
   <div class="root-btn">
-    <%= link_to "一覧へ戻る", "/", class: "root" %>
+    <%= link_to "一覧へ戻る", lists_path, class: "root" %>
   </div>
 </div>  

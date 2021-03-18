@@ -7,8 +7,8 @@
  <div class="search-form">
   <%= search_form_for @q, url: search_records_path do |f| %>
     <div class="freeword-form">
-      <%= f.label :title_or_text_cont, 'キーワード検索' %>
-      <%= f.search_field :title_or_text_cont %>
+      <%= f.label :title_or_text_or_place_or_with_cont, 'キーワード検索' %>
+      <%= f.search_field :title_or_text_or_place_or_with_cont %>
     </div>
     <div class="category-form">
       <%= f.label :category_id_eq, 'カテゴリー検索' %>
