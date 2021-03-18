@@ -1,0 +1,16 @@
+.edit-form-wrap{
+  width: 50%;
+  margin: 50px 0 0 0;
+  background-color: white;
+}
+.registration-delete-content{
+  margin: 30px auto;
+  width: 200px;
+}
+.registration-delete-btn input{
+  cursor: pointer;
+}
+#edit_user{
+  padding-bottom: 50px;
+  border-bottom: 1px double lightgray;
+}

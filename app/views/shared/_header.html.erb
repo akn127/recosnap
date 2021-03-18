@@ -8,7 +8,7 @@
         <span><%= link_to "#{current_user.name}さん", "/", method: :get, class:"user-name" %>
           <ul class="lists-button">
             <li><%= link_to 'お気に入り', user_path(current_user.id), class: "menu" %></li>
-            <li><%= link_to 'ユーザー情報変更', "#", class: "menu" %></li>
+            <li><%= link_to 'ユーザー情報変更', edit_user_registration_path, class: "menu" %></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "menu" %></li>
           </ul>
         </span>

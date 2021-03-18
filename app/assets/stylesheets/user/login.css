@@ -44,6 +44,7 @@ form input{
 .actions input[type="submit"]{
   background-color: #B2D0DA;
   color: white;
+  cursor: pointer;
 }
 
 .new-user{
