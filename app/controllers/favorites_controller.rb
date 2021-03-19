@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
 
   def create
     if @record.user_id != current_user.id
-      @favorite = Favorite.create(user_id: current_user.id, record_id: @record.id)
+      @favorite = Favorite.create(user_id: current_user.id,record_id: @record.id)
       redirect_back(fallback_location: root_path)
     end
   end

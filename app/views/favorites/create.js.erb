@@ -1,0 +1,1 @@
+$('#favorites_buttons<%= @record.id%>'').html("<%= j(render "favorites/favorite", locals: {record: @record, favorite: @favorite) %>")
