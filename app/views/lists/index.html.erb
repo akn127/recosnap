@@ -10,6 +10,8 @@
       <%= render partial: "recordlist", locals: {record: record}%>
     <% end %>
   </div>
-
+  <%# 記録一覧 %>
+  
+  <div class="p-top__paginate"><%= paginate @records %></div>
 </div>
 </div>
