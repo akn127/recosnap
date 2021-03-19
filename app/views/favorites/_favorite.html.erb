@@ -1,7 +1,11 @@
 <% if !Favorite.exists?(user: current_user, record_id: @record.id) %>
-  <%= link_to "お気に入り登録", record_favorites_path(@record), method: :post %>
-  <%= @record.favorites.length %>
+  <%= link_to record_favorites_path(@record), method: :post, class:"like" do%>
+    <i class="far fa-bookmark"></i>
+  <% end %>
 <% else %>
-  <%= link_to "お気に入り解除", record_favorite_path(@record), method: :delete %>
-  <%= @record.favorites.length %>
+  <%= link_to record_favorite_path(@record), method: :delete, class:"liked" do %>
+    <i class="fas fa-bookmark"></i>
+  <% end %>
 <% end %>
+
+<%= @record.favorites.length %>
