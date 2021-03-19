@@ -15,7 +15,10 @@
         </h2>
     
     <%# お気に入りボタン %>
-    <%= render "favorites/favorite", record: @record %>
+    <div class="favorite-btn">
+    お気に入り
+      <%= render "favorites/favorite", record: @record %>
+    </div>
     <%# お気に入りボタン %>
 
     </div>
