@@ -19,7 +19,10 @@ RSpec.describe "記録を投稿", type: :system do
       expect(page).to have_content('記録する')
       # 投稿ページに移動する
       visit new_record_path
+      # 添付する画像を定義する
+      image_path = Rails.root.join('public/images/test_image.png')
       # フォームに情報を入力する
+      attach_file('record[images][]', image_path, make_visible: true)
       fill_in 'record-title', with: @record.title
       select '旅行', from: 'record[category_id]'
       fill_in 'record_date', with: @record.date
@@ -34,11 +37,13 @@ RSpec.describe "記録を投稿", type: :system do
       }.to change { Record.count }.by(1)
       # トップページに遷移する
       expect(current_path).to eq(root_path)
+      # 写真投稿一覧ページには先ほど投稿した内容の写真テキストが存在することを確認する（画像）
+      expect(page).to have_selector("img[src$='test_image.png']")
       # トップページには先ほど投稿したタイトルの記録が存在することを確認する
       expect(page).to have_content(@record.title)
-      # トップページには先ほど投稿したタイトルの記録が存在することを確認する
+      # トップページには先ほど投稿した日付の記録が存在することを確認する
       expect(page).to have_content(@record.date)
-      # トップページには先ほど投稿したタイトルの記録が存在することを確認する
+      # トップページには先ほど投稿した場所の記録が存在することを確認する
       expect(page).to have_content(@record.place)
     end
   end
