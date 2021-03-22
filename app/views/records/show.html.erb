@@ -65,7 +65,7 @@
     </div>
     <div class="destroy-btn">
       <div class="destroy-btn-box">
-      <%= link_to "削 除", record_path(@record.id), method: :delete, data: { confirm: "記録を削除してもよろしいですか？"}, class: "record-destroy" %>
+      <%= link_to "削 除", record_path(@record.id), method: :delete, id: "delete_button", data: { confirm: "記録を削除してもよろしいですか？"}, class: "record-destroy" %>
       </div>
     </div>
     <div class="root-btn">
