@@ -62,6 +62,9 @@
     <%= f.text_area :url, class:"url", id:"record-url", placeholder:"参考URL", maxlength:"100" %>
     <div class="record-status">
       公開・非公開
+      <span class="title-box-notice">
+      ※「公開（open）」を選択すると「みんなの記録」に表示されます
+      </span>
     </div>
     <%= f.select :status, Record.statuses.keys.map{|k| [k, k]}, {}, { class:"record-open"} %>
 
@@ -74,5 +77,9 @@
 
   <div class="back-button">
     <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+
+  <div class="root-btn">
+    <%= link_to "みんなの記録へ", lists_path, class: "root" %>
   </div>
 </div>

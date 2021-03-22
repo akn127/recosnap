@@ -56,6 +56,11 @@
   margin-top: 10px;
   font-weight: bold;
 }
+.title-box-notice{
+  font-size: 12px;
+  padding-left: 20px;
+  color: #EED2BC;
+}
 .record-btn-contents{
   display: flex;
   justify-content: center;

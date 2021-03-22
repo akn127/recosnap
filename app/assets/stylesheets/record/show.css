@@ -3,7 +3,7 @@
 }
 .show-box{
   width: 500px;
-  margin: 0 auto 30px;
+  margin: 0 auto 10px;
   border-bottom: 1px solid lightgray;
 }
 .record-img-content{
@@ -88,4 +88,11 @@
 .favorite-btn{
   width: 110px;
   margin-left: auto;
+}
+.created_at {
+  width: 500px;
+  margin: 0 auto 30px;
+  font-size: 13px;
+  color: darkgray;
+  text-align: right;
 }
