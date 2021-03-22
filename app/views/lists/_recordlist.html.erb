@@ -13,14 +13,17 @@
             <h3 class='record-title'>
               <%= record.title %>
             </h3>
-            <div class='record-memo'>
-              <span><%= record.date %><br><%= record.place %></span>
+            <div class='record-date-memo'>
+              <%= record.date %>
+            </div>
+            <div class='record-place-memo'>
+              <i class="fas fa-map-marker-alt"></i><%= record.place %>
             </div>
             <div class="record-username">
               by  <%= record.user.name %>さん
             </div>
               <i class="fas fa-bookmark"></i>
-            <%= record.favorites.length %>
+              <%= record.favorites.length %>
           </div>
         </div>
         <% end %>

@@ -87,3 +87,20 @@ a {
   transform: scale(1.1);
 }
 
+.record-status-0 {
+  background-color: #B2D0DA;
+  width: 60px;
+  text-align: center;
+  border-radius: 5px;
+}
+.record-status-1 {
+  background-color: #EED2BC;
+  width: 60px;
+  text-align: center;
+  border-radius: 5px;
+}
+.record-date-memo,
+.record-place-memo,
+.record-username {
+  margin-bottom: 7px;
+}

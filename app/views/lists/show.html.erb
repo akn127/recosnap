@@ -55,6 +55,11 @@
     </div>
   </div>
 
+  <div class="created_at">
+  作成日時　
+    <%= @record.created_at.to_s(:datetime_jp)%>
+  </div>
+
 　<% if current_user.id == @record.user_id %>
   <div class="edit-btn">
     <div class="edit-btn-box">

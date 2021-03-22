@@ -13,13 +13,19 @@
         <h2 class="title">
         <%= @record.title %>
         </h2>
-    
     <%# お気に入りボタン %>
-    <i class="fas fa-bookmark"></i>
-    <%= @record.favorites.length %>
+        <% if @record.status == "open" %>
+        <div class="favorite-btn">
+          お気に入り
+          <div class="favorite__btn">
+            <i class="fas fa-bookmark"></i>
+            <%= @record.favorites.length %>
+          </div>
+        </div>
+        <% end %>
+      </div>
     <%# お気に入りボタン %>
 
-      </div>
       <div class="show-title-box">
         <div class="category-text">カテゴリー</div>
         <div class="category-id"><%= @record.category.name %></div>
@@ -45,6 +51,11 @@
         <div class="category-id"><%= text_url_to_link(@record.url).html_safe %></div>
       </div>
     </div>
+
+      <div class="created_at">
+      作成日時　
+        <%= @record.created_at.to_s(:datetime_jp)%>
+      </div>
 
 
     <div class="edit-btn">
