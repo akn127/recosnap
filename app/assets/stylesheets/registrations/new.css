@@ -1,4 +1,4 @@
-.login-main {
+.registration-main {
   width: 100%;
   min-width: 800px;
   height: 100%;
@@ -7,20 +7,8 @@
   justify-content: center;
   margin: 70px auto 0;
 }
-.login-body {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-}
-.login-left {
-  width: 40%;
-  margin: 50px 0 0 0;
-}
-.login-introdunction {
-  padding-top: 30px;
-}
-.login-form-wrap{
-  width: 40%;
+.form-wrap{
+  width: 50%;
   margin: 50px 0 0 0;
   border: 2px solid #B2D0DA;
   border-radius: 10px;
@@ -77,10 +65,4 @@ form input{
 .guest-login{
   margin: 50px 0 20px 0;
   font-size: 14px;
-}
-
-
-
-.login-body {
-  display: flex;
 }
