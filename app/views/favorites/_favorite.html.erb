@@ -1,5 +1,5 @@
 <% if !Favorite.exists?(user: current_user, record_id: @record.id) %>
-  <%= link_to record_favorites_path(@record), method: :post, class:"like" do%>
+  <%= link_to record_favorites_path(@record), method: :post, class:"like" do %>
     <i class="far fa-bookmark"></i>
   <% end %>
 <% else %>

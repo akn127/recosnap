@@ -15,10 +15,15 @@
         </h2>
     
     <%# お気に入りボタン %>
-    <div class="favorite-btn">
-      お気に入り
+    <div class="favorite-btn-box">
+      <div class="record-user-name">
+        by  <%= @record.user.name %>さん
+      </div>
       <div class="favorite-btn">
-        <%= render "favorites/favorite", locals: {record: @record, favorite: @favorite} %>
+      お気に入り
+      <div class="favorite__btn">
+        <%= render "favorites/favorite", record: @record %>
+      </div>
       </div>
     </div>
     <%# お気に入りボタン %>
@@ -66,4 +71,5 @@
   <div class="root-btn">
     <%= link_to "一覧へ戻る", lists_path, class: "root" %>
   </div>
+
 </div>  

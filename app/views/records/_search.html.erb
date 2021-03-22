@@ -1,0 +1,27 @@
+<div class="search-box">
+  <div class="search-form-title">
+    検索
+  </div>
+  <div class="search-form">
+    <%= search_form_for @q, url: search_records_path do |f| %>
+        <i class="fas fa-search"></i>
+        <%= f.search_field :title_or_text_or_place_or_with_cont, placeholder:"キーワード検索" do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+
+        <%= f.label :category_id_eq, 'カテゴリー検索' %>
+        <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank:'指定なし' %>
+      <div class="date-form">
+          <ul class="fm">
+            <li>日付検索</li>
+            <li><%= f.date_field :date_gteq, include_blank: true %></li>
+            <li>~</li>
+            <li><%= f.date_field :date_lteq, include_blank: true %></li>
+          </ul>
+      </div>
+      <div class="submit-btn">
+        <%= f.submit "検索" %>
+      </div>
+    <% end %>
+  </div>
+</div>

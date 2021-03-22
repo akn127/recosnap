@@ -5,33 +5,7 @@
   <h1>思い出を記録しよう</h1>
 
   <%# 検索フォーム %>
-  <div class="search-form">
-    <%= search_form_for @q, url: search_records_path do |f| %>
-      <div class="freeword-form">
-        <%= f.label :title_or_text_or_place_or_with_cont, '検索' %>
-        <%= f.search_field :title_or_text_or_place_or_with_cont, placeholder:"キーワード検索" %>
-      </div>
-      <div class="category-form">
-        <%= f.label :category_id_eq, 'カテゴリー検索' %>
-        <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank:'指定なし' %>
-      </div>
-      <dl class="date-form">
-        <dt class="date-form-title">
-        日付検索
-        </dt>
-        <dd class="data date">
-          <ul class="fm">
-            <li><%= f.date_field :date_gteq, include_blank: true %></li>
-            <li>~</li>
-            <li><%= f.date_field :date_lteq, include_blank: true %></li>
-          </ul>
-        </dd>
-      </dl>
-      <div class="submit-btn">
-        <%= f.submit "検索" %>
-      </div>
-    <% end %>
-  </div>
+<%= render 'search' %>
   <%# //検索フォーム %>
 
   <%# 記録一覧 %>

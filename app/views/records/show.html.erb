@@ -15,7 +15,8 @@
         </h2>
     
     <%# お気に入りボタン %>
-    <%= render "favorites/favorite", record: @record %>
+    <i class="fas fa-bookmark"></i>
+    <%= @record.favorites.length %>
     <%# お気に入りボタン %>
 
       </div>

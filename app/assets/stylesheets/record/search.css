@@ -14,21 +14,41 @@ a {
 .main-records li{
   list-style: none;
 }
+.search-box{
+  width: 80%;
+  height: 300px;
+  margin: 0 auto 50px;
+  padding-top: 20px;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
 
 .search-form{
   width: 100%;
-  height: 300px;
+  height: 230px;
+  margin: 0 auto;
+  padding-top: 10px;
   display: flex;
   justify-content: space-around;
 }
-
-.date ul li{
-  width: auto;
-  float: left;
-  margin: 0 5px 0 0;
-  padding: 0;
-  line-height: 35px;
+.search-form input{
+  width: 200px;
 }
+.search-form-title{
+  padding-left: 60px;
+}
+.date-form{
+  display: flex;
+}
+.date-form ul {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.date-form ul li{
+  display: inline-block;
+}
+
 
 .records-contents ul{
   height: 230px;
@@ -50,12 +70,4 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.record-image-content{
-  width: 200px;
-}
-.record-image-content image {
-  width: 100px;
-}
-.record-string-content{
-  width: calc(100% - 230px);
-}
+
