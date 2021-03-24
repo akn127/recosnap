@@ -101,16 +101,20 @@ password: test123456<br>
 
 # 実装した機能についてのGIFと説明
 
-![ログイン画面](https://user-images.githubusercontent.com/78142379/112243218-8d602600-8c90-11eb-8526-5f4f09b49bd6.gif)
-
-![新規投稿](https://user-images.githubusercontent.com/78142379/112243831-9d2c3a00-8c91-11eb-8221-6c1f659e125b.gif)
-
-![お気に入り登録・解除](https://user-images.githubusercontent.com/78142379/112244349-820dfa00-8c92-11eb-9e1d-58948b13d591.gif)
-
-![お気に入り一覧](https://user-images.githubusercontent.com/78142379/112244553-d6b17500-8c92-11eb-9def-714de6b4ead3.gif)
-
-![キーワード検索](https://user-images.githubusercontent.com/78142379/112245370-175dbe00-8c94-11eb-9b17-524c9066bed2.gif)
-
+### ログイン画面
+![ログイン画面](https://user-images.githubusercontent.com/78142379/112243218-8d602600-8c90-11eb-8526-5f4f09b49bd6.gif)<br>
+### 新規投稿
+![新規投稿](https://user-images.githubusercontent.com/78142379/112243831-9d2c3a00-8c91-11eb-8221-6c1f659e125b.gif)<br>
+### お気に入り登録・解除]
+![お気に入り登録・解除](https://user-images.githubusercontent.com/78142379/112244349-820dfa00-8c92-11eb-9e1d-58948b13d591.gif)<br>
+### お気に入り一覧
+![お気に入り一覧](https://user-images.githubusercontent.com/78142379/112244553-d6b17500-8c92-11eb-9def-714de6b4ead3.gif)<br>
+### キーワード検索
+![キーワード検索](https://user-images.githubusercontent.com/78142379/112245370-175dbe00-8c94-11eb-9b17-524c9066bed2.gif)<br>
+### カテゴリ検索
+![カテゴリ検索](https://user-images.githubusercontent.com/78142379/112247929-6efe2880-8c98-11eb-8872-2d9ee60e117a.gif)<br>
+### 日付検索
+![日付検索](https://user-images.githubusercontent.com/78142379/112248108-be445900-8c98-11eb-8736-4a6e820f794c.gif)<br>
 
 # 実装予定の機能
 - [ ] お気に入り機能の非同期化

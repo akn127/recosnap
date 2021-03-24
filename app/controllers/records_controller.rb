@@ -51,7 +51,7 @@ class RecordsController < ApplicationController
   end
 
   def set_q
-    @q = Record.ransack(params[:q])
+    @q = current_user.records.ransack(params[:q])
   end
 
 end
