@@ -1,12 +1,12 @@
-.record-show{
+.record-show {
   margin: 90px auto 0;
 }
-.show-box{
+.show-box {
   width: 500px;
   margin: 0 auto 10px;
   border-bottom: 1px solid lightgray;
 }
-.record-img-content{
+.record-img-content {
   width: 90%;
   margin: 0 auto 30px;
   display: flex;
@@ -14,48 +14,48 @@
   flex-wrap: wrap;
 }
 
-.record-box-img{
+.record-box-img {
   width: 400px;
   margin: 0 auto 20px;
 
 }
-.show-title-box{
+.show-title-box {
   height: 50px;
   padding: 0 50px;
   display: flex;
   align-items: center;
   border-top: 1px solid lightgray;
 }
-.record-title-text{
+.record-title-text {
   height: 50px;
   padding: 20px 50px 0 50px;
 }
-.record-text-box{
+.record-text-box {
   padding: 0 50px;
 }
-.show-record-box{
+.show-record-box {
   border-top: 1px solid lightgray;
 }
 .edit-btn,
 .destroy-btn,
-.root-btn{
+.root-btn {
   display: flex;
   justify-content: center;
   height: 50px;
   margin-top: 30px;
 }
-.edit-btn-box{
+.edit-btn-box {
   width: 100px;
   background-color: #EED2BC;
   display: flex;
   justify-content: center;
 }
 .edit-btn-box:hover,
-.destroy-btn-box:hover{
+.destroy-btn-box:hover {
   opacity: 0.5;
 }
 
-.record-edit-btn{
+.record-edit-btn {
   text-align: center;
   width: 150px;
   padding-top: 10px;
@@ -65,13 +65,13 @@
   cursor: pointer;
 }
 
-.destroy-btn-box{
+.destroy-btn-box {
   width: 100px;
   background-color: #D3CBD0;
   display: flex;
   justify-content: center;
 }
-.record-destroy{
+.record-destroy {
   text-align: center;
   width: 150px;
   padding-top: 10px;
@@ -81,11 +81,11 @@
   cursor: pointer;
 }
 .category-text,
-.record-title-text{
+.record-title-text {
   color: darkgray;
   width: 150px;
 }
-.favorite-btn{
+.favorite-btn {
   width: 110px;
   margin-left: auto;
 }
