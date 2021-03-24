@@ -7,7 +7,7 @@
   justify-content: center;
   margin: 70px auto 0;
 }
-.form-wrap{
+.form-wrap {
   width: 50%;
   margin: 50px 0 0 0;
   border: 2px solid #B2D0DA;
@@ -18,36 +18,33 @@
 .form-header-text,.new-user,.guest-login,.login-flash-message{
   text-align: center;
 }
-
-form input{
+form input {
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
 }
-.field{
+.field {
   width: 80%;
   margin: 0 auto;
 }
-
-.actions{
+.actions {
   width: 50%;
   margin: 50px auto 20px;
 }
-.column-row{
+.column-row {
   font-size: 12px;
   width: 80%;
   margin: 0 auto;
   text-decoration: none;
 }
-.actions input[type="submit"]{
+.actions input[type="submit"] {
   background-color: #B2D0DA;
   color: white;
   cursor: pointer;
 }
-
-.new-user{
+.new-user {
   width: 50%;
   margin: 0 auto 30px;
   padding: 10px;
@@ -62,7 +59,7 @@ form input{
   text-decoration: none;
   color: grey;
 }
-.guest-login{
+.guest-login {
   margin: 50px 0 20px 0;
   font-size: 14px;
 }

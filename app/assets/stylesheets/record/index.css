@@ -1,21 +1,19 @@
 a {
   text-decoration: none;
 }
-
 .main {
   background-color: white;
 }
-.main-records{
+.main-records {
   background-color: white;
   width: 70%;
   margin: 70px auto 0;
   padding-top: 20px;
 }
-.main-records li{
+.main-records li {
   list-style: none;
 }
-
-.records-contents ul{
+.records-contents ul {
   height: 230px;
   background-color: #FFF;
   padding: 20px;
@@ -24,7 +22,7 @@ a {
 .records-contents ul:hover {
   box-shadow: 1px 1px 12px rgba(0,0,0,.65);
 }
-.record-lists{
+.record-lists {
   width: 90vw;
   margin: 10px auto;
 }
@@ -33,42 +31,42 @@ a {
   padding: 1vw;
   background-color: #FFF;
 }
-.record-info{
+.record-info {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.record-image-content{
+.record-image-content {
   width: 250px;
 }
 .record-image-content img {
   width: 250px;
 }
-.record-string-content{
+.record-string-content {
   width: calc(100% - 290px);
 }
-.submit-btn{
+.submit-btn {
   width: 100px;
   margin: 0 auto;
   display: flex;
 }
-.submit-btn input{
+.submit-btn input {
   background-color: #FBE9D9;
   border: 1px solid #FBE9D9;
   cursor: pointer;
   margin-top: 20px;
 }
-.submit-btn input:hover{
+.submit-btn input:hover {
   opacity: 0.5;
 }
 /*paginate*/
-.pagination{
+.pagination {
   margin: auto;
   width: 50%;
   display: flex;
   justify-content: center;
 }
-.pagination span{
+.pagination span {
   text-align: center;
   width: 70px;
   color: #602F44;
@@ -76,12 +74,12 @@ a {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.pagination span:hover{
+.pagination span:hover {
   transition: .3s;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-.pagination span a:hover{
+.pagination span a:hover {
   transition: .3s;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
