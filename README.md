@@ -101,14 +101,15 @@ password: test123456<br>
 
 # 実装した機能についてのGIFと説明
 
-### 新規登録
+![ログイン画面](https://user-images.githubusercontent.com/78142379/112243218-8d602600-8c90-11eb-8526-5f4f09b49bd6.gif)
 
-### [ログイン]
-(https://gyazo.com/67c936307112cfe69fb849eea82b11f4)
+![新規投稿](https://user-images.githubusercontent.com/78142379/112243831-9d2c3a00-8c91-11eb-8221-6c1f659e125b.gif)
 
-### 「記録する」（新規投稿）
+![お気に入り登録・解除](https://user-images.githubusercontent.com/78142379/112244349-820dfa00-8c92-11eb-9e1d-58948b13d591.gif)
 
-### お気に入り登録/解除
+![お気に入り一覧](https://user-images.githubusercontent.com/78142379/112244553-d6b17500-8c92-11eb-9def-714de6b4ead3.gif)
+
+![キーワード検索](https://user-images.githubusercontent.com/78142379/112245370-175dbe00-8c94-11eb-9b17-524c9066bed2.gif)
 
 
 # 実装予定の機能
